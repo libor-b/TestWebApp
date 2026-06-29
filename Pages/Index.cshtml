@@ -1,0 +1,33 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Seznam osob";
+}
+
+<h1>Seznam osob</h1>
+<p class="text-muted">Demo Razor Pages aplikace (SQLite lokálně, MySQL na serveru).</p>
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Příjmení</th>
+            <th>Jméno</th>
+            <th>Telefon</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var person in Model.People)
+        {
+            <tr>
+                <td>@person.LastName</td>
+                <td>@person.FirstName</td>
+                <td>@person.Phone</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (Model.People.Count == 0)
+{
+    <p>Žádné záznamy.</p>
+}

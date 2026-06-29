@@ -1,0 +1,20 @@
+# .NET build output
+bin/
+obj/
+*.user
+
+# Local SQLite database (regeneruje se při startu)
+people.db
+people.db-shm
+people.db-wal
+
+# Rider / VS / VS Code
+.idea/
+.vs/
+*.suo
+
+# macOS
+.DS_Store
+
+# Claude Code lokální nastavení
+.claude/settings.local.json
