@@ -20,4 +20,9 @@ public class Person
     [Phone]
     [StringLength(30)]
     public string? Phone { get; set; }
+
+    [Display(Name = "E-mail")]
+    [EmailAddress]
+    [StringLength(150)]
+    public string? Email { get; set; }
 }
